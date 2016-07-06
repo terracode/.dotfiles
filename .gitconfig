@@ -1,0 +1,34 @@
+[core]
+	excludesfile = /Users/stereomisha/.gitignore_global
+	autocrlf = input
+	editor = subl -n -w
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = stereomisha
+	email = stereomisha@gmail.com
+[push]
+	default = simple
+[alias]
+	tl = log --color --pretty=format:\"%x1b[31m%h%x09%x1b[0m%ad |%x1b[32m%d%x1b[0m %s - [%an]\" --date=short
+	hist = log --color --pretty=format:\"%x1b[31m%h%x09%x1b[0m%ad |%x1b[32m%d%x1b[0m %s - [%an]\" --graph --date=short
+	tree = log --graph --full-history --all --color --date=short --pretty=format:\"%x1b[31m%h%x09%x1b[0m%ad |%x1b[32m%d%x1b[0m %s - [%an]\"
+	chl = log --color --pretty=format:\"%x1b[31m%x1b[0m%ad |%x1b[32m%d%x1b[0m %s - [%an]\" --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	ci = commit
+	di = diff
+	st = status
+	co = checkout
+	cat = cat-file
+	type = cat-file -t
+	dump = cat-file -p
